@@ -1,4 +1,4 @@
-# Curso Full Cycle 3.0 - Módulo Docker
+# Curso Full Cycle 3.0 - Módulo Fundamento da Arquitetura de Software
 
 <div>
     <img alt="Criado por Alcir Junior [Caju]" src="https://img.shields.io/badge/criado%20por-Alcir Junior [Caju]-%23f08700">
