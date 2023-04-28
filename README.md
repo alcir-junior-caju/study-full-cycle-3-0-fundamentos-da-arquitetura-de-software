@@ -118,3 +118,108 @@ Para quem quiser visualizar o projeto na IDE clique no teclado a tecla `ponto`, 
 - Legal;
 - Audit;
 - Marketing;
+
+#### Características arquiteturais
+- Operacionais;
+- Estruturais;
+- Cross-Cutting;
+
+#### Características arquiteturais: Operacionais
+- Disponibilidade;
+- Recuperação de desastres;
+- Performance;
+- Recuperação (backup);
+- Confiabilidade e segurança;
+- Robustes;
+- Escalabilidade;
+
+#### Características arquiteturais: Estruturais
+- Configurável;
+- Extensibilidade;
+- Fácil instalação;
+- Reuso de componentes;
+- Internacionalização;
+- Fácil manutenção;
+- Portabilidade (diversos bancos de dados);
+- Fácil suporte (logs, debugging);
+
+#### Características arquiteturais: Cross-Cutting
+- Acessibilidade;
+- Processo de retenção e recuperação de dados (quanto tempo os dados serão mantidos);
+- Autenticação e Autorização;
+- Legal;
+- Privacidade;
+- Segurança;
+- Usabilidade;
+
+#### Perspectivas para arquitetar software de qualidade
+- Performance;
+- Escalabilidade;
+- Resiliência;
+
+#### Performance
+- É o desempenho que um software possuí para completar um determinado workload;
+- As unidades de medida para avaliarmos a performance de um software são:
+    - Latência ou "Response time";
+    - Throughput;
+- Ter um software performártico é diferente de ter um software escalável;
+
+#### Métricas para medir a performance
+- Diminuindo a latência;
+    - Normalmente medida em milliseconds;
+    - É afetada pelo tempo de processamento da aplicação, rede e chamadas externas;
+- Aumentando o throughput;
+    - Quantidade de requisições;
+    - Diretamente ligado com a latência;
+
+#### Principais razões para baixa performance
+- Processamento ineficiente;
+- Recursos computacionais limitados;
+- Trabalhar de forma bloqueante;
+- Acesso serial a recursos;
+
+#### Principais formas para aumentar a eficiência
+- Escala da capacidade computacional (CPU, Disco, Memória, Rede);
+- Lógica por trás do software (Algoritmos, Queries, Overhead de frameworks);
+- Concorrência e paralelismo;
+- Banco de dados (Tipos de bancos, Schema);
+- Caching;
+
+#### Capacidade Computacional: Escala vertical vs horizontal
+- Escala vertical seria aumentar a capacidade computacional;
+- Escala Horizontal seria aumentar a capacidade de máquinas utilizando load balancer;
+
+#### Concorrência vs Paralelismo
+- "Concorrência é sobre lidar com muitas coisas ao mesmo tempo. Paralelismo é fazer muitas coisas ao mesmo tempo. (Rob Pike)";
+
+#### Caching
+- Cache na borda / Edge computing;
+- Dados estáticos;
+- Páginas web;
+- Funções internas;
+    - Evita reprocessamento de algoritmos pesados;
+    - Acesso a banco de dados;
+- Objetos;
+
+#### Caching: Exclusivo vs Compartilhado
+- Exclusivo;
+    - Baixa latência;
+    - Duplicado entre os nós;
+    - Problemas relacionados a sessões;
+- Compartilhado;
+    - Maior latência;
+    - Não há duplicação;
+    - Sessões compartilhadas;
+    - Banco de dados externo;
+        - MySQL;
+        - Redis;
+        - Memcache;
+
+#### Caching: Edge computing
+- Cache realizado mais próximo ao usuário;
+- Evita a requisição chegar até o Cloud Provider / infra;
+- Normalmente arquivos estáticos;
+- CDN - Content Delivery Network;
+- Cloudflare workers;
+- Vercel;
+- Akamai;
